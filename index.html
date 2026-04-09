@@ -207,8 +207,35 @@
 
   /* OM */
   .about-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
+    display: grid; grid-template-columns: 1fr 1.2fr;
     gap: 5rem; align-items: center;
+  }
+
+  .about-photo-wrap {
+    position: relative;
+  }
+
+  .about-photo-wrap::before {
+    content: '';
+    position: absolute;
+    top: -12px; left: -12px;
+    right: 12px; bottom: 12px;
+    border: 1px solid var(--orange);
+    border-radius: 6px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .about-photo {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 6px;
+    display: block;
+    position: relative;
+    z-index: 1;
+    filter: grayscale(15%);
   }
 
   .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
@@ -431,36 +458,21 @@
 <section id="om">
   <div class="container">
     <div class="about-grid">
-      <div>
-        <p class="section-label">Om Scrollkritik</p>
-        <h2 class="section-title">Forskning möter verkligheten</h2>
-        <div class="about-stats">
-          <div class="stat">
-            <div class="stat-num">4h</div>
-            <div class="stat-label">Genomsnittlig svensk skärmtid per dag</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">50%+</div>
-            <div class="stat-label">Av unga får nyheter via sociala medier</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">2022</div>
-            <div class="stat-label">LVU-kampanjen nådde internationell spridning</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">↑</div>
-            <div class="stat-label">Rysk informationspåverkan mot Sverige ökar</div>
-          </div>
-        </div>
+      <div class="about-photo-wrap">
+        <img src="poya.png" alt="Poya Sondosi, grundare av Scrollkritik" class="about-photo">
       </div>
       <div>
+        <p class="section-label">Om föreläsaren</p>
+        <h2 class="section-title">Poya Sondosi</h2>
         <div class="about-quote">
           <blockquote>"En trött och förvirrad medborgare är lättare att styra än en som vet vad den tror på."</blockquote>
         </div>
         <p class="about-bio">
-          <strong>Poya Sondosi</strong> är föreläsare och grundare av Scrollkritik. Med en kandidatexamen i statsvetenskap och forskning om desinformationskampanjer riktade mot Sverige kombinerar han akademisk grund med ett engagerat och tillgängligt sätt att nå unga.
+          Poya Sondosi är föreläsare och grundare av Scrollkritik. Med en <strong>kandidatexamen i statsvetenskap</strong> och forskning om desinformationskampanjer riktade mot Sverige kombinerar han akademisk grund med ett engagerat och tillgängligt sätt att nå unga.
           <br><br>
-          Scrollkritik utgår från verkliga fall och konkreta psykologiska mekanismer – anpassat för klassrummet, ungdomsgården och kommunsalen.
+          Hans forskning analyserar verkliga fall – från rysk informationspåverkan till LVU-kampanjen – och hur psykologiska mekanismer som bekräftelsebias och algoritmlogik utnyttjas i det hybrida medielandskapet.
+          <br><br>
+          Scrollkritik är anpassat för <strong>klassrummet, ungdomsgården och kommunsalen</strong>.
         </p>
       </div>
     </div>
@@ -507,7 +519,7 @@
         <p>Fyll i formuläret så återkommer jag inom ett par dagar med mer information om pris, datum och upplägg.</p>
         <div class="contact-detail">
           <div class="contact-detail-icon">✉️</div>
-          <a href="mailto:info@scrollkritik.se">info@scrollkritik.se</a>
+          <a href="/cdn-cgi/l/email-protection#81e8efe7eec1f2e2f3eeededeaf3e8f5e8eaaff2e4"><span class="__cf_email__" data-cfemail="f0999e969fb08393829f9c9c9b829984999bde8395">[email&#160;protected]</span></a>
         </div>
         <div class="contact-detail">
           <div class="contact-detail-icon">🌐</div>
@@ -546,9 +558,4 @@
 
 <!-- FOOTER -->
 <footer>
-  <a href="#" style="font-family:'Helvetica Neue',sans-serif;letter-spacing:4px;font-size:0.95rem;"><span style="font-weight:200">scroll</span><strong>kritik</strong></a>
-  <p>© 2026 Scrollkritik · <a href="mailto:info@scrollkritik.se">info@scrollkritik.se</a></p>
-</footer>
-
-</body>
-</html>
+  <a href="#" style="font-family:'Helvetica Neue',sans-serif;letter-spacing:4px;font-size:0.95rem;"><span style="font-weight:200">scroll</span><strong>kritik
